@@ -1,0 +1,420 @@
+html,
+body {
+  cursor: none;
+  user-select: none;
+}
+body {
+  margin: 0;
+  background-image: none;
+  background-color: #111;
+  color: #aaa;
+  font-size: 1.2rem;
+  font-family: "Samim", sans-serif;
+}
+a.link {
+  color: #ffc114;
+  text-decoration: none;
+  transition-duration: 2s;
+  cursor: none;
+}
+a.link:hover {
+  color: #32ccff;
+  transition-duration: 0.5s;
+}
+
+/* About */
+.about {
+  margin: 2rem 10rem 1rem;
+  line-height: 2rem;
+  font-size: 1.4rem;
+  text-align: justify;
+}
+.about strong {
+  display: inline-block;
+  color: #ccc;
+  background-size: 100% 20%;
+  background-repeat: repeat-x;
+  background-position: left 0% bottom -10%;
+  background-image: linear-gradient(
+    179deg,
+    #ffc114 0%,
+    #ffc114 20%,
+    transparent 54%,
+    transparent 100%
+  );
+}
+
+.boxContainer {
+  overflow-x: hidden;
+}
+.box {
+  position: relative;
+  width: 40%;
+  padding: 1.5rem 2rem;
+  border-radius: 0 1rem 1rem 0;
+  text-align: justify;
+  background-color: #252525;
+  overflow-x: hidden;
+  /* center mobile 	*/
+  display: table;
+  margin: 4rem auto;
+  transition-duration: 1s;
+}
+
+.boxLeft {
+  float: left;
+  padding-left: 3rem;
+  border-radius: 0 1rem 1rem 0;
+  transform: translateX(-5rem);
+  transition-duration: 1s;
+}
+.boxLeft:hover {
+  transition-duration: 1s;
+  transform: translateX(2rem) scale(1.2);
+}
+
+.boxRight {
+  float: right;
+  padding-right: 3rem;
+  border-radius: 1rem 0rem 0rem 1rem;
+  transform: translateX(5rem);
+  transition-duration: 1s;
+}
+.boxRight:hover {
+  transition-duration: 1s;
+  transform: translateX(-2rem) scale(1.2);
+}
+
+.imageInBox {
+  margin: 0rem auto 1rem;
+  max-width: 10rem;
+  display: table;
+}
+
+.thisSkill {
+  position: absolute;
+  top: 0;
+  background-color: #444;
+  padding: 0.4rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.thisSkillRight {
+  left: 1rem;
+}
+.thisSkillLeft {
+  right: 1rem;
+}
+
+.rightMargin {
+  margin-top: 10rem;
+}
+
+.clear {
+  clear: both;
+}
+
+h1.know {
+  color: #eee;
+  text-align: center;
+}
+.halfMark {
+  padding: 2rem;
+  box-shadow: inset 0rem -0.8em 0 #32ccff;
+  transition: box-shadow 0.6s ease-in-out;
+  padding: 0;
+}
+.halfMark:hover {
+  box-shadow: inset 0 -2em 0 #d20078;
+  transition: box-shadow 0.4s ease-in-out;
+}
+
+.lightContainer {
+  position: relative;
+}
+
+.playBtn {
+  color: #444;
+  position: fixed;
+  top: 0.25rem;
+  right: 0.2rem;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-size: 2rem;
+  background-color: #0000;
+  cursor: none;
+}
+
+/* contact */
+.inTouch {
+  color: #f3f3f3;
+}
+.list {
+  font-family: "Samim", sans-serif;
+}
+.listItem {
+  display: table;
+  font-size: 1.5rem;
+  margin: 1.4rem auto;
+  font-weight: bold;
+}
+.contactRef {
+  text-decoration: none;
+  color: inherit;
+  cursor: none;
+}
+.email {
+  color: #f82c3d;
+}
+.github {
+  color: #909090;
+}
+.telegram {
+  color: #2ea6da;
+}
+.linkedin {
+  color: #0077b5;
+}
+.dribbble {
+  color: #ea4c89;
+}
+.empty {
+  height: 20vh;
+}
+
+.buttonCenter {
+  display: flex;
+  display: table;
+  margin: auto;
+}
+
+.contact {
+  border: none;
+  outline: none;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #eee;
+  background-color: #0000;
+  cursor: none;
+  transition-duration: 1s;
+}
+/* #ffc114 */
+/* #d20078 */
+/* #32ccff */
+/* #02a556 */
+
+.contact:hover {
+  transition-duration: 0.5s;
+}
+
+/* blur */
+.viewport {
+  z-index: 100;
+  position: fixed;
+  top: 10vh;
+  left: 10vw;
+  display: block;
+  margin: auto;
+  width: 80vw;
+  height: 80vh;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.055);
+  box-shadow: 0px 24px 24px #0005;
+  border: 1px solid rgba(225, 225, 225, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+.tiles div {
+  display: inline-block;
+  margin: 1rem;
+  width: 30vw;
+  height: 13vh;
+  background-color: #0009;
+  box-shadow: 0px 16px 24px #0005;
+  border: 0px solid #0c0c0c42;
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  transition-duration: 0.1s;
+}
+.tiles div:hover {
+  background-color: #000e;
+  transition-duration: 0.5s;
+}
+.bigTile {
+  display: inline-block;
+  margin: 1rem;
+  width: 62vw;
+  height: 13vh;
+  background-color: #0009;
+  box-shadow: 0px 16px 24px #0005;
+  border: 1px solid #0c0c0c42;
+  border-radius: 16px;
+  /* backdrop-filter: blur(10px); */
+  cursor: none;
+  transition-duration: 0.1s;
+}
+.bigTile:hover {
+  background-color: #000e;
+  font-weight: bold;
+  transition-duration: 0.5s;
+}
+
+.x {
+  background-color: #0000;
+  border: none;
+  outline: none;
+  color: #ddd;
+  position: absolute;
+  right: 1rem;
+  top: 0.7rem;
+  cursor: none;
+  transition-duration: 0.1s;
+}
+.x:hover {
+  transform: scale(1.3);
+  transition-duration: 0.1s;
+}
+.hidden {
+  visibility: hidden;
+}
+
+#box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25rem;
+  height: 10rem;
+}
+.gradient-border {
+  --borderWidth: 1.5rem;
+  background: #111;
+  position: relative;
+  border-radius: var(--borderWidth);
+  transition-duration: 2s;
+}
+.gradient-border:hover {
+  border-radius: 17.5rem;
+  transition-duration: 2s;
+}
+.gradient-border:after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about {
+    font-size: 1rem;
+    margin: 1rem 2rem 1rem;
+    line-height: 1.8rem;
+  }
+
+  hr.divider {
+    margin: 2rem 1rem;
+  }
+  .imageInBox {
+    max-width: 7rem;
+  }
+
+  .imageInBox {
+    display: table;
+    margin: 0rem auto 1rem;
+  }
+
+  article.firstBoxRight,
+  article.firstBoxLeft {
+    margin-top: 2rem;
+  }
+  .boxRight {
+    transform: none;
+    padding: 1.5rem 2rem;
+  }
+  .boxLeft {
+    transform: none;
+    padding: 1.5rem 2rem;
+  }
+  .box {
+    width: 75%;
+    margin: 2rem auto;
+    font-size: 1.1rem;
+  }
+  .boxRight:hover {
+    transform: none;
+  }
+  .boxLeft:hover {
+    transform: none;
+  }
+
+  .listItem {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  #box {
+    width: 15rem;
+    height: 7rem;
+  }
+
+  .contact {
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #eee;
+    background-color: #0000;
+    cursor: none;
+    transition-duration: 1s;
+  }
+  .gradient-border {
+    --borderWidth: 1rem;
+    background: #111;
+    position: relative;
+    border-radius: var(--borderWidth);
+    transition-duration: 2s;
+  }
+  .gradient-border:hover {
+    border-radius: 7rem;
+    transition-duration: 2s;
+  }
+  .viewport {
+    width: 95vw;
+    height: 75vh;
+    top: 5vh;
+    left: 2.5vw;
+  }
+  .tiles div {
+    width: 40vw;
+    height: 13vh;
+    margin: 0.5rem;
+  }
+}

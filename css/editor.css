@@ -1,0 +1,96 @@
+.theWindow {
+  /* width: 70%; */
+  margin: 1rem 4rem 1rem;
+  background-color: #222;
+  padding: 1% 2% 3%;
+  /* border-radius: 0 0 0.5rem 0.5rem; */
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  animation: pop 0.5s;
+}
+@keyframes pop {
+  from {
+    transform: translateX(-50rem);
+  }
+  to {
+  }
+}
+
+.line {
+  margin: 1.5% 0.8%;
+  border-radius: 0.2rem;
+  cursor: text;
+}
+.word {
+  transition-duration: 0.1s;
+}
+.word:hover {
+  transition-duration: 0.1s;
+}
+.dots {
+  margin: 0rem 0rem 0rem;
+  background-color: #222;
+  padding: 1% 0% 2%;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.dot {
+  display: inline-block;
+  margin: 0rem 0.25rem;
+  border-radius: 0.5rem;
+  /* padding: 0rem 0.55rem; */
+  padding: 0.55rem 0.55rem;
+  cursor: pointer;
+}
+.dot:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.left {
+  background-color: #ff5f56;
+}
+.center {
+  background-color: #ffbd2e;
+}
+.right {
+  background-color: #27c93f;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  cursor: auto;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #252525;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #61616188;
+}
+
+@media screen and (max-width: 650px) {
+  .theWindow {
+    font-size: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 0;
+  }
+  .line {
+    margin: 2.5% 1%;
+  }
+  .dots {
+    padding: 2% 0% 1%;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .dot {
+    /* display: inline; */
+    font-size: 0.5rem;
+    margin: 0rem 0.2rem;
+    border-radius: 0.4rem;
+    padding: 0.37rem 0.37rem;
+  }
+}

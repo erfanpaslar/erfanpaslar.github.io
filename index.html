@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Erfan Paslar</title>
+
+    <link rel="stylesheet" href="css/editor.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/cursor.css" />
+    <link rel="stylesheet" href="css/slide.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.7.2/prop-types.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/samim-font@v4.0.5/dist/font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.11.1/css/all.css"
+    />
+  </head>
+  <body>
+    <button class="playBtn" id="playMusic">
+      <em class="fad fa-play"></em>
+    </button>
+
+    <article id="theWindow" class="theWindow">
+      <div class="dots">
+        <span class="dot left"></span>
+        <span class="dot center"></span>
+        <span class="dot right"></span>
+      </div>
+    </article>
+
+    <section id="About" class="about">
+      <p>
+        Hi I'm <span class="myName tapered">Erfan Paslar</span> a
+        <strong class="tapered">programmer</strong> and
+        <strong class="tapered">web designer</strong>. I'm about
+        <span id="myAge"></span> old and study Computer Science Engineering at
+        Shiraz University. I am interested in web developing and programming.
+      </p>
+    </section>
+
+    <br />
+		
+    <h1 id="Know" class="know">
+      <span class="halfMark">&nbsp;Things I know&nbsp;</span>
+    </h1>
+
+    <div class="boxContainer">
+      <article class="box boxLeft firstBoxLeft">
+        <div class="thisSkillLeft thisSkill">Python</div>
+        <img
+          class="imageInBox imgLeft"
+          src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1612810727/python_o7vq5n.webp"
+          alt=""
+					draggable="false"
+        />
+        <p class="textLeft">
+          I've learned python about <span id="pythonYear"></span> ago. I worked
+          with some libraries like <span style="color: #ed00df">P</span
+          ><span style="color: #00f0ff">y</span
+          ><span style="color: #c0fbbd">g</span
+          ><span style="color: #bfc0ff">a</span
+          ><span style="color: #ffbfbf">m</span
+          ><span style="color: #fffebf">e</span>,
+          <span style="color: #00ae00">Selenium</span>,
+          <span style="color: #434142">R</span
+          ><span style="color: #a1a1a1">e</span
+          ><span style="color: #434142">q</span
+          ><span style="color: #a1a1a1">u</span
+          ><span style="color: #434142">e</span
+          ><span style="color: #a1a1a1">s</span
+          ><span style="color: #434142">t</span
+          ><span style="color: #a1a1a1">s</span>,
+          <span style="color: #c5df90">T</span
+          ><span style="color: #a7d48a">u</span
+          ><span style="color: #c5df90">r</span
+          ><span style="color: #a7d48a">t</span
+          ><span style="color: #c5df90">l</span
+          ><span style="color: #a7d48a">e</span>,
+          <span style="color: #3b81c0">N</span
+          ><span style="color: #3b81c0">u</span
+          ><span style="color: #3b81c0">m</span
+          ><span style="color: #e9bc30">p</span
+          ><span style="color: #e9bc30">y</span>,
+          <span style="color: #00177e">P</span
+          ><span style="color: #00177e">a</span
+          ><span style="color: #ffcb00">n</span
+          ><span style="color: #e80089">d</span
+          ><span style="color: #00177e">a</span
+          ><span style="color: #00177e">s</span>,
+          <span style="color: #105278">M</span
+          ><span style="color: #105278">a</span
+          ><span style="color: #ffd633">t</span
+          ><span style="color: #fe8332">p</span
+          ><span style="color: #d5fe5a">l</span
+          ><span style="color: #3268fe">o</span
+          ><span style="color: #91fe91">t</span
+          ><span style="color: #105278">l</span
+          ><span style="color: #105278">i</span
+          ><span style="color: #105278">b</span>,
+          <span style="color: #2c6444">Django</span>,
+          <span style="color: #00f703">O</span
+          ><span style="color: #00f703">p</span
+          ><span style="color: #f71c04">e</span
+          ><span style="color: #f71c04">n</span
+          ><span style="color: #022ef7">C</span
+          ><span style="color: #022ef7">V</span>,
+          <span style="color: #3294c7">scikit</span>-<span
+            style="color: #f09437"
+            >learn</span
+          >, <span style="color: #9932cc">Eel</span>,
+          <span style="color: #3294c7">Telegram-bot</span>, and ... .
+        </p>
+      </article>
+
+      <div class="rightMargin"></div>
+      <article class="box boxRight firstBoxRight">
+        <div class="thisSkillRight thisSkill">HTML, CSS, JS</div>
+        <img
+          class="imageInBox imgRight"
+          src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616846590/personal_website/theone_syl27f.png"
+          alt=""
+					draggable="false"
+        />
+        <p>
+          I build my first website about <span id="htmlYear"></span> ago and it
+          just looked like late 90's website XD. I built about 12 other websites
+          too.
+        </p>
+      </article>
+
+      <article class="box boxLeft">
+        <div class="thisSkillLeft thisSkill">C, C++, C#</div>
+        <img
+          class="imageInBox imgLeft"
+          src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1612810727/cLogo_dwj2rl.webp"
+          alt=""
+					draggable="false"
+        />
+        <p>
+          I've learned C, <span id="cYear"></span> ago and wrote some projects.
+          Currently I'm learning C++. Also I've done some project with C# ( just
+          basics, Calculator stuff :D ).
+        </p>
+      </article>
+
+      <article class="box boxRight">
+        <div class="thisSkillRight thisSkill">PHP</div>
+        <img class="imageInBox imgRight" src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845036/personal_website/php_iztox4.png" alt="" draggable="false"/>
+        <p>
+          I've learned PHP <span id="phpYear"></span> ago and wrote a complete Contact Management System <a class="link" href="https://letscode.erfanpaslar.ir">website</a>
+          with pure PHP (in 2 months), you can join me there. I will learn laravel someday.
+        </p>
+      </article>
+      <article class="box boxLeft">
+        <div class="thisSkillLeft thisSkill">Java</div>
+
+        <img
+          class="imageInBox imgLeft"
+          src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1612810725/javaLogo_bi8tyn.webp"
+          alt=""
+					draggable="false"
+        />
+        <p>
+          I know java a little but i will start on it later.<br />
+          I've started android studio <span id="javaYear"></span> ago and I
+          wrote some mobile apps too but i never uploaded them on playStore.
+          (not that i could)
+        </p>
+      </article>
+
+			<article class="box boxRight">
+        <div class="thisSkillRight thisSkill">Others</div>
+        <img class="imageInBox imgRight" src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845035/personal_website/arduino_mr2l19.png" alt="" draggable="false"/>
+        <p>
+          There are some other languages that I worked know but I haven't properly worked with them such as Assembly, Go, Verilog.
+        </p>
+				<p>I also worked with arduino too.</p>
+      </article>
+
+    </div>
+    <div class="clear"></div>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <h1 id="Works" class="know"><span class="halfMark">&nbsp;My works&nbsp;</span></h1>
+
+    <div id="app"></div>
+
+    <div class="viewport hidden" id="glass">
+      <button class="x" id="x" onclick="closeGetInTouch();">
+        <em class="fad fa-times fa-2x"></em>
+      </button>
+      <h2 class="inTouch">Get in touch</h2>
+			<a href="https://github.com/erfanpaslar" class="contactRef">
+      <div class="tiles">
+        <div>
+          <span class="listItem github"><em class="fab fa-github"></em>/erfanpaslar</span
+          >
+        </div>
+				</a>
+
+
+        <a href="https://t.me/erfan_paslar" target="_blank" class="contactRef">
+          <div>
+            <span class="listItem telegram">
+              <em class="fab fa-telegram-plane"></em> @erfan_paslar
+            </span>
+          </div>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/erfan-paslar-7689881a9"
+          class="contactRef"
+					target="_blank"
+        >
+          <div>
+            <span class="listItem linkedin"
+              >Linked<em class="fab fa-linkedin"></em>
+            </span>
+          </div>
+        </a>
+
+				<a href="https://dribbble.com/ErfanPaslar" class="contactRef" target="_blank">
+        <div>
+          <span class="listItem dribbble"><em class="fab fa-dribbble"></em>/ErfanPaslar</span>
+        </div>
+				</a>
+      </div>
+
+			<a href="mailto:paslarerfan1@gmail.com" target="_blank">
+				<div class="bigTile">
+					<span class="listItem email"
+						><em class="fad fa-envelope"></em> paslarerfan1@gmail.com</span
+					>
+				</div>
+			</a>
+    </div>
+
+    <div class="buttonCenter" onclick="openGetInTouch();">
+      <div class="gradient-border" id="box">
+        <span class="btnContact contact">Get in touch</span>
+      </div>
+    </div>
+
+    
+    <div class="empty"></div>
+
+    <div id="cursor" class="Cursor"></div>
+    <script src="js/slide.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
