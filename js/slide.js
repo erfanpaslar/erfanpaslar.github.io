@@ -150,8 +150,9 @@ const Carousel = ({ slides, isPageBackground }) => {
           className: "prevSlideBtn",
           onClick: handlePrevSlide,
         },
-        /*#__PURE__*/ React.createElement("i", {
-          className: "fas fa-chevron-left",
+        /*#__PURE__*/ React.createElement("img", {
+          className: "angle-left",
+          src: "images/angle-left.svg",
         })
       ),
       [...slides, ...slides, ...slides].map((slide, i) => {
@@ -182,8 +183,9 @@ const Carousel = ({ slides, isPageBackground }) => {
           className: "nextSlideBtn",
           onClick: handleNextSlide,
         },
-        /*#__PURE__*/ React.createElement("i", {
-          className: "fas fa-chevron-right",
+        /*#__PURE__*/ React.createElement("img", {
+          className: "angle-right",
+          src: "images/angle-right.svg",
         })
       )
     )

@@ -1,20 +1,8 @@
-/* @charset "UTF-8"; */
-
-/* html,
-body,
-#app {
-  height: 100%;
-} */
-
 #app {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-
-/* body * {
-  box-sizing: border-box;
-} */
 
 .slideContent {
   width: 250px;
@@ -181,4 +169,19 @@ body,
 .linkSlide {
   text-decoration: none;
   cursor: none;
+}
+
+.angle-right,
+.angle-left {
+  width: 2rem;
+  cursor: pointer;
+  transition-duration: 0.1s;
+}
+.angle-right:hover {
+  transform: translateX(0.5rem);
+  transition-duration: 0.1s;
+}
+.angle-left:hover {
+  transform: translateX(-0.5rem);
+  transition-duration: 0.1s;
 }

@@ -6,13 +6,14 @@
   /* border-radius: 0 0 0.5rem 0.5rem; */
   border-radius: 0.5rem;
   font-size: 1rem;
-  animation: pop 0.5s;
+  /* animation: pop 0.1s; */
 }
 @keyframes pop {
   from {
-    transform: translateX(-50rem);
+    transform: translateX(-10rem);
   }
   to {
+    transform: translateX(0rem);
   }
 }
 
@@ -92,5 +93,10 @@
     margin: 0rem 0.2rem;
     border-radius: 0.4rem;
     padding: 0.37rem 0.37rem;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 7px;
+    cursor: auto;
   }
 }

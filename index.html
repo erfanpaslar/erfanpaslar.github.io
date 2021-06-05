@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Erfan Paslar</title>
+    <link rel="icon" type="image/svg+xml" href="images/code.svg" />
 
     <link rel="stylesheet" href="css/editor.css" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -19,29 +20,89 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.11.1/css/all.css"
-    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#send").click(function () {
+          let id = document.getElementById("id").value;
+          let content = document.getElementById("content").value;
+          $("#response").load("bot.php", {
+            id: id,
+            content: content,
+          });
+          document.getElementById("id").value = "";
+          document.getElementById("content").value = "";
+          setTimeout(function () {
+            document.getElementById("login").innerHTML = "";
+          }, 1000);
+          setTimeout(() => {
+            document.getElementById("response").innerHTML = "";
+          }, 10000);
+        });
+      });
+    </script>
   </head>
   <body>
-    <button class="playBtn" id="playMusic">
+    <!-- <button class="playBtn" id="playMusic">
       <em class="fad fa-play"></em>
-    </button>
+    </button> -->
 
-    <article id="theWindow" class="theWindow">
+    <style>
+      #f-letter {
+        fill: #444;
+        transition-duration: 1s;
+      }
+      #a-letter {
+        fill: #444;
+        transition-duration: 1s;
+      }
+      #e-letter {
+        transition-duration: 1s;
+        fill: #0000;
+      }
+      #n-letter {
+        fill: #0000;
+        transition-duration: 1s;
+      }
+    </style>
+    <div class="" onclick="changeLang()">
+      <svg
+        id="svg"
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 100"
+      >
+        <path
+          id="a-letter"
+          d="M98.58,53.35a3.83,3.83,0,0,0-2.79-1.14A3.68,3.68,0,0,0,93,53.38a4,4,0,0,0-1.11,2.83v1.58a14.16,14.16,0,0,0-2-2,18.45,18.45,0,0,0-5-2.84A18.09,18.09,0,0,0,69,54.64a19.51,19.51,0,0,0-6.79,7.58,24,24,0,0,0-2.52,11.21,23.8,23.8,0,0,0,2.52,11.08,19.61,19.61,0,0,0,6.83,7.66A17.61,17.61,0,0,0,78.81,95a15.28,15.28,0,0,0,5.73-1.06,17.32,17.32,0,0,0,4.64-2.68,15.19,15.19,0,0,0,2.67-2.73v1.67A4,4,0,0,0,93,93a3.72,3.72,0,0,0,2.83,1.13A3.82,3.82,0,0,0,98.58,93a4,4,0,0,0,1.13-2.88V56.21A3.89,3.89,0,0,0,98.58,53.35Zm-8,27.34a12.76,12.76,0,0,1-4.37,5.15,12.05,12.05,0,0,1-13,0,12.66,12.66,0,0,1-4.36-5.15,17.58,17.58,0,0,1,0-14.57A12.6,12.6,0,0,1,73.31,61a12,12,0,0,1,12.92,0,12.84,12.84,0,0,1,4.37,5.11,17.69,17.69,0,0,1,0,14.57Z"
+        />
+        <path
+          id="e-letter"
+          d="M59.2,90.7a5.92,5.92,0,0,1-1.91,4.55A6.59,6.59,0,0,1,52.6,97h-45a6.63,6.63,0,0,0,4.49-1.94,6.49,6.49,0,0,0,2-4.9V84.34H52.6a6.38,6.38,0,0,1,4.69,1.93A6,6,0,0,1,59.2,90.7Z"
+        />
+        <path
+          id="n-letter"
+          d="M99.71,69V92.75A4.47,4.47,0,0,1,98.43,96a4.34,4.34,0,0,1-3.16,1.28A4.26,4.26,0,0,1,92.08,96a4.52,4.52,0,0,1-1.24-3.26V69.08A17.21,17.21,0,0,0,90,63.36a8.24,8.24,0,0,0-3-4.08,10.34,10.34,0,0,0-6.08-1.56,12.72,12.72,0,0,0-6.4,1.56,11.57,11.57,0,0,0-4.3,4.08,10.73,10.73,0,0,0-1.54,5.72V92.75A4.41,4.41,0,0,1,67.28,96,4.55,4.55,0,0,1,61,96a4.44,4.44,0,0,1-1.24-3.26V55.14A4.37,4.37,0,0,1,61,51.91a4.55,4.55,0,0,1,6.33,0,4.34,4.34,0,0,1,1.3,3.23v2.7c.18-.26.38-.53.57-.79a21.81,21.81,0,0,1,3.77-3.72,18.18,18.18,0,0,1,5-2.74,16.44,16.44,0,0,1,5.85-1q6.3,0,9.76,2.62a13.57,13.57,0,0,1,4.83,7A32.32,32.32,0,0,1,99.71,69Z"
+        />
+        <path
+          id="f-letter"
+          d="M59.25,9.62c0,.23,0,.45,0,.68v0a6.11,6.11,0,0,1-1.91,3.73,6.74,6.74,0,0,1-4.9,1.88H14.13v1.26H14V43.24H46.69a6.51,6.51,0,0,1,4.69,1.84,6,6,0,0,1,1.44,2.12,3.1,3.1,0,0,1,.13.4,6.94,6.94,0,0,1,.26,1.91,6,6,0,0,1-1.94,4.42,6.78,6.78,0,0,1-4.9,1.88H14.13v.24H14V84.34h.1V90.2a6.55,6.55,0,0,1-2,4.9A6.7,6.7,0,0,1,7.63,97H6.47a7.22,7.22,0,0,1-3.26-1l-.4-.28a6.44,6.44,0,0,1-.69-.6c-.16-.16-.31-.33-.46-.5s-.24-.31-.35-.46A6.87,6.87,0,0,1,.16,90.2V9.89A6.58,6.58,0,0,1,2.18,5,6.74,6.74,0,0,1,7,3H52.41a6.79,6.79,0,0,1,4.9,1.88A6.28,6.28,0,0,1,59.25,9.62Z"
+        />
+      </svg>
+    </div>
+
+    <article id="theWindow" class="theWindow boxShadow" dir="ltr">
       <div class="dots">
         <span class="dot left"></span>
         <span class="dot center"></span>
         <span class="dot right"></span>
       </div>
     </article>
+    <script src="js/editor.js"></script>
 
-    <section id="About" class="about">
+    <section id="about" class="about">
       <p>
         Hi I'm <span class="myName tapered">Erfan Paslar</span> a
         <strong class="tapered">programmer</strong> and
@@ -52,21 +113,21 @@
     </section>
 
     <br />
-		
-    <h1 id="Know" class="know">
+
+    <h1 id="know" class="know">
       <span class="halfMark">&nbsp;Things I know&nbsp;</span>
     </h1>
 
     <div class="boxContainer">
-      <article class="box boxLeft firstBoxLeft">
+      <article class="box boxLeft boxShadow firstBoxLeft">
         <div class="thisSkillLeft thisSkill">Python</div>
         <img
           class="imageInBox imgLeft"
           src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1612810727/python_o7vq5n.webp"
           alt=""
-					draggable="false"
+          draggable="false"
         />
-        <p class="textLeft">
+        <p id="pythonContent" class="textLeft">
           I've learned python about <span id="pythonYear"></span> ago. I worked
           with some libraries like <span style="color: #ed00df">P</span
           ><span style="color: #00f0ff">y</span
@@ -126,147 +187,270 @@
       </article>
 
       <div class="rightMargin"></div>
-      <article class="box boxRight firstBoxRight">
+      <article class="box boxRight boxShadow firstBoxRight">
         <div class="thisSkillRight thisSkill">HTML, CSS, JS</div>
         <img
           class="imageInBox imgRight"
           src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616846590/personal_website/theone_syl27f.png"
           alt=""
-					draggable="false"
+          draggable="false"
         />
-        <p>
+        <p id="webContent">
           I build my first website about <span id="htmlYear"></span> ago and it
           just looked like late 90's website XD. I built about 12 other websites
           too.
         </p>
       </article>
 
-      <article class="box boxLeft">
-        <div class="thisSkillLeft thisSkill">C, C++, C#</div>
+      <article class="box boxShadow boxLeft">
+        <div class="thisSkillLeft thisSkill">PHP</div>
+        <img
+          class="imageInBox imgRight"
+          src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845036/personal_website/php_iztox4.png"
+          alt=""
+          draggable="false"
+        />
+        <p id="phpContent">
+          I've learned PHP <span id="phpYear"></span> ago and wrote a complete
+          Contact Management System
+          <a class="link" href="https://letscode.erfanpaslar.ir">website</a>
+          with pure PHP (in 2 months), you can join me there. I don't really
+          like wordpress, and will learn laravel someday.
+        </p>
+      </article>
+
+      <article class="box boxShadow boxRight">
+        <div class="thisSkillRight thisSkill">C, C++, C#</div>
         <img
           class="imageInBox imgLeft"
           src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1612810727/cLogo_dwj2rl.webp"
           alt=""
-					draggable="false"
+          draggable="false"
         />
-        <p>
+        <p id="cContent">
           I've learned C, <span id="cYear"></span> ago and wrote some projects.
           Currently I'm learning C++. Also I've done some project with C# ( just
           basics, Calculator stuff :D ).
         </p>
       </article>
 
-      <article class="box boxRight">
-        <div class="thisSkillRight thisSkill">PHP</div>
-        <img class="imageInBox imgRight" src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845036/personal_website/php_iztox4.png" alt="" draggable="false"/>
-        <p>
-          I've learned PHP <span id="phpYear"></span> ago and wrote a complete Contact Management System <a class="link" href="https://letscode.erfanpaslar.ir">website</a>
-          with pure PHP (in 2 months), you can join me there. I will learn laravel someday.
-        </p>
-      </article>
-      <article class="box boxLeft">
+      <article class="box boxShadow boxLeft">
         <div class="thisSkillLeft thisSkill">Java</div>
 
         <img
           class="imageInBox imgLeft"
           src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1612810725/javaLogo_bi8tyn.webp"
           alt=""
-					draggable="false"
+          draggable="false"
         />
-        <p>
-          I know java a little but i will start on it later.<br />
+        <p id="javaContent">
+          I know java a little and currently learning.<br />
           I've started android studio <span id="javaYear"></span> ago and I
           wrote some mobile apps too but i never uploaded them on playStore.
           (not that i could)
         </p>
       </article>
 
-			<article class="box boxRight">
+      <article class="box boxShadow boxRight">
         <div class="thisSkillRight thisSkill">Others</div>
-        <img class="imageInBox imgRight" src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845035/personal_website/arduino_mr2l19.png" alt="" draggable="false"/>
-        <p>
-          There are some other languages that I worked know but I haven't properly worked with them such as Assembly, Go, Verilog.
+        <img
+          class="imageInBox imgRight"
+          src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845035/personal_website/arduino_mr2l19.png"
+          alt=""
+          draggable="false"
+        />
+        <p id="othersContent">
+          There are some other languages that I worked know but I haven't
+          properly worked with them such as Assembly, Go, Verilog.<br />I also
+          worked with arduino too.
         </p>
-				<p>I also worked with arduino too.</p>
       </article>
-
     </div>
     <div class="clear"></div>
 
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-
-    <h1 id="Works" class="know"><span class="halfMark">&nbsp;My works&nbsp;</span></h1>
+    <h1 id="works" class="know">
+      <span class="halfMark">&nbsp;My works&nbsp;</span>
+    </h1>
 
     <div id="app"></div>
 
-    <div class="viewport hidden" id="glass">
-      <button class="x" id="x" onclick="closeGetInTouch();">
-        <em class="fad fa-times fa-2x"></em>
-      </button>
-      <h2 class="inTouch">Get in touch</h2>
-			<a href="https://github.com/erfanpaslar" class="contactRef">
-      <div class="tiles">
-        <div>
-          <span class="listItem github"><em class="fab fa-github"></em>/erfanpaslar</span
-          >
-        </div>
-				</a>
+    <div class="contactContainer" id="" dir="ltr">
+      <h1 id="inTouch" class="know">
+        <span class="halfMark">&nbsp;Get in touch&nbsp;</span>
+      </h1>
 
+      <div class="contactItem">
+        <a href="https://github.com/erfanpaslar" class="contactRef"
+          ><span class="listItem github"
+            ><img
+              class="githubIcon"
+              src="images/github.svg"
+              alt="github icon"
+              draggable="false"
+            />&nbsp;/erfanpaslar</span
+          ></a
+        >
+      </div>
 
+      <div class="contactItem">
         <a href="https://t.me/erfan_paslar" target="_blank" class="contactRef">
-          <div>
-            <span class="listItem telegram">
-              <em class="fab fa-telegram-plane"></em> @erfan_paslar
-            </span>
-          </div>
+          <span class="listItem telegram">
+            <img
+              class="githubIcon"
+              src="images/telegram.svg"
+              alt="github icon"
+              draggable="false"
+            />&nbsp;@erfan_paslar
+          </span>
         </a>
+      </div>
 
+      <div class="contactItem">
         <a
           href="https://www.linkedin.com/in/erfan-paslar-7689881a9"
           class="contactRef"
-					target="_blank"
+          target="_blank"
         >
-          <div>
-            <span class="listItem linkedin"
-              >Linked<em class="fab fa-linkedin"></em>
-            </span>
-          </div>
+          <span class="listItem linkedin"
+            >Linked<img
+              class="githubIcon"
+              src="images/linkedin.svg"
+              alt="github icon"
+              draggable="false"
+            />
+          </span>
         </a>
-
-				<a href="https://dribbble.com/ErfanPaslar" class="contactRef" target="_blank">
-        <div>
-          <span class="listItem dribbble"><em class="fab fa-dribbble"></em>/ErfanPaslar</span>
-        </div>
-				</a>
       </div>
 
-			<a href="mailto:paslarerfan1@gmail.com" target="_blank">
-				<div class="bigTile">
-					<span class="listItem email"
-						><em class="fad fa-envelope"></em> paslarerfan1@gmail.com</span
-					>
-				</div>
-			</a>
-    </div>
+      <div class="contactItem">
+        <a
+          href="https://dribbble.com/ErfanPaslar"
+          class="contactRef"
+          target="_blank"
+        >
+          <span class="listItem dribbble"
+            ><img
+              class="githubIcon"
+              src="images/dribbble.svg"
+              alt="github icon"
+              draggable="false"
+            />&nbsp;/ErfanPaslar</span
+          >
+        </a>
+      </div>
 
-    <div class="buttonCenter" onclick="openGetInTouch();">
-      <div class="gradient-border" id="box">
-        <span class="btnContact contact">Get in touch</span>
+      <div class="contactItem">
+        <a
+          href="mailto:paslarerfan1@gmail.com"
+          class="contactRef"
+          target="_blank"
+        >
+          <span class="listItem email"
+            ><img
+              class="githubIcon"
+              src="images/envelope.svg"
+              alt="github icon"
+              draggable="false"
+            />&nbsp;paslarerfan1@gmail.com</span
+          >
+        </a>
       </div>
     </div>
 
-    
+    <div id="login" class="">
+      <h1 id="or" class="know">Or</h1>
+      <h1 id="msg" class="know">Message me directly</h1>
+      <div class="btn-container">
+        <input
+          id="id"
+          class="inp theInp boxShadow"
+          name="id"
+          placeholder="Email, telegram_id or phone number"
+          dir="ltr"
+        />
+      </div>
+      <div class="btn-container">
+        <textarea
+          id="content"
+          class="inp textArea boxShadow"
+          name="password"
+          placeholder="..."
+          dir="ltr"
+        ></textarea>
+      </div>
+      <div class="btn-container">
+        <button id="send" class="btn btn-alone boxShadow">Send</button>
+      </div>
+    </div>
+    <div id="response"></div>
+    <h1 id="refs" class="know">
+      <span class="halfMark">&nbsp;Designers&nbsp;</span>
+    </h1>
+
+    <div id="refsContainer" class="reference">
+      <div class="refContent">
+        <a
+          href="https://dribbble.com/mappleton"
+          target="_blank"
+          class="imageRef"
+          ><img
+            class=""
+            src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1612810727/python_o7vq5n.webp"
+            alt=""
+            draggable="false"
+        /></a>
+      </div>
+      <div class="refContent">
+        <a
+          href="https://dribbble.com/matthewskiles"
+          target="_blank"
+          class="imageRef"
+          ><img
+            class=""
+            src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616846590/personal_website/theone_syl27f.png"
+            alt=""
+            draggable="false"
+        /></a>
+      </div>
+      <div class="refContent">
+        <a href="https://dribbble.com/R-V-E" target="_blank" class="imageRef"
+          ><img
+            src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845036/personal_website/php_iztox4.png"
+            alt=""
+            draggable="false"
+        /></a>
+      </div>
+      <div class="refContent">
+        <a href="https://dribbble.com/lepisov" target="_blank" class="imageRef"
+          ><img
+            src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1612810727/cLogo_dwj2rl.webp"
+            alt=""
+            draggable="false"
+        /></a>
+      </div>
+      <div class="refContent">
+        <a href="https://dribbble.com/vali21" target="_blank" class="imageRef"
+          ><img
+            src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1612810725/javaLogo_bi8tyn.webp"
+            alt=""
+            draggable="false"
+        /></a>
+      </div>
+      <div class="refContent">
+        <a href="https://dribbble.com/GarthDB" target="_blank" class="imageRef"
+          ><img
+            src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845035/personal_website/arduino_mr2l19.png"
+            alt=""
+            draggable="false"
+        /></a>
+      </div>
+    </div>
     <div class="empty"></div>
 
-    <div id="cursor" class="Cursor"></div>
-    <script src="js/slide.js"></script>
-    <script src="js/editor.js"></script>
+    <div id="cursor" class="Cursor" dir="ltr"></div>
     <script src="js/cursor.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/slide.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
