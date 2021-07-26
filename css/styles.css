@@ -136,8 +136,12 @@ h1.know {
 .list {
   font-family: "Samim", sans-serif;
 }
+.contactContainer{
+  text-align: center;
+}
 .contactItem {
   /* width: 50%; */
+  display: inline;
   text-align: center;
   margin: 0.5rem auto;
 }
@@ -149,9 +153,10 @@ h1.know {
   transition-duration: 0.5s;
 }
 .listItem:hover {
-  height: 10rem !important;
-  font-size: 2rem;
-  transition-duration: 0.5s;
+  /* height: 10rem !important; */
+  /* margin:.5rem .5rem; */
+  /* font-size: 2rem; */
+  /* transition-duration: 0.5s; */
 }
 .contactRef {
   text-decoration: none;
@@ -411,23 +416,51 @@ input.theInp {
 }
 
 /* Icons */
+
+
 .githubIcon {
-  height: 1.7rem;
-  vertical-align: middle;
+  height: 2.5rem;
+  margin: .5rem;
+  transition-duration: .5s;
+}
+.githubIcon:hover{
+  transition-duration: .5s;
+  transform:scale(1.2);
+}
+@media screen and (min-width: 768px) {
+  .githubIcon {
+    height: 3rem;
+    margin: .6rem;
+  }
+  .githubIcon:hover{
+    transform:scale(1.5);
+  } 
+}
+
+.message{
+  font-size: 1.5rem;
 }
 .ok {
-  margin-top: 5rem;
-  font-size: 3rem;
+  /* margin-top: 5rem;
+  font-size: 2rem; */
+  margin: 0;
   color: #6aff6a;
   text-align: center;
   font-weight: bold;
 }
 .error {
-  margin-top: 5rem;
-  font-size: 3rem;
+  /* margin-top: 5rem;
+  font-size: 2rem; */
+  margin: 0;
   color: #f82c3d;
   text-align: center;
   font-weight: bold;
+}
+#response {
+  height:2rem
+}
+.aLittleBottomMargin{
+  margin-bottom: 2rem;
 }
 
 .boxShadow {
