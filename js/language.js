@@ -1,4 +1,4 @@
-var lang = "en";
+var lang = new Date().getTimezoneOffset()==-270?"fa": "en";
 
 let contentPer = {
   about: `<p>
@@ -235,4 +235,9 @@ function changeLang() {
     theContent = contentEng;
     makeFarsi();
   }
+}
+
+if(lang == "fa"){
+    lang="en"
+    changeLang();
 }
