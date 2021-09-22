@@ -136,7 +136,7 @@ h1.know {
 .list {
   font-family: "Samim", sans-serif;
 }
-.contactContainer{
+.contactContainer {
   text-align: center;
 }
 .contactItem {
@@ -417,27 +417,26 @@ input.theInp {
 
 /* Icons */
 
-
 .githubIcon {
   height: 2.5rem;
-  margin: .5rem;
-  transition-duration: .5s;
+  margin: 0.5rem;
+  transition-duration: 0.5s;
 }
-.githubIcon:hover{
-  transition-duration: .5s;
-  transform:scale(1.2);
+.githubIcon:hover {
+  transition-duration: 0.5s;
+  transform: scale(1.2);
 }
 @media screen and (min-width: 768px) {
   .githubIcon {
     height: 3rem;
-    margin: .6rem;
+    margin: 0.6rem;
   }
-  .githubIcon:hover{
-    transform:scale(1.5);
-  } 
+  .githubIcon:hover {
+    transform: scale(1.5);
+  }
 }
 
-.message{
+.message {
   font-size: 1.5rem;
 }
 .ok {
@@ -457,9 +456,9 @@ input.theInp {
   font-weight: bold;
 }
 #response {
-  height:2rem
+  height: 2rem;
 }
-.aLittleBottomMargin{
+.aLittleBottomMargin {
   margin-bottom: 2rem;
 }
 
