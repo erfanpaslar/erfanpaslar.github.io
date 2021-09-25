@@ -152,12 +152,6 @@ h1.know {
   vertical-align: middle;
   transition-duration: 0.5s;
 }
-.listItem:hover {
-  /* height: 10rem !important; */
-  /* margin:.5rem .5rem; */
-  /* font-size: 2rem; */
-  /* transition-duration: 0.5s; */
-}
 .contactRef {
   text-decoration: none;
   color: inherit;
@@ -312,9 +306,6 @@ input.theInp {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .btn {
-    /* width: 70%; */
-  }
   button.btn-alone {
     width: 65%;
   }
@@ -507,4 +498,7 @@ svg {
 }
 .imageRef img {
   height: 7vw;
+}
+.hide{
+  display:none
 }

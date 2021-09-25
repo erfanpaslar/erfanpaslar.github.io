@@ -1,7 +1,3 @@
-let zone = new Date().getTimezoneOffset();
-var lang = zone == -270 || zone == -210 ? "fa" : "en";
-
-
 
 let contentPer = {
 	about: `<p>

@@ -23,23 +23,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <script>
-      $(document).ready(function () {
-        $("#send").click(function () {
-          let id = document.getElementById("id").value;
-          let content = document.getElementById("content").value;
-          $("#response").load("bot.php", {
-            id: id,
-            content: content,
-          });
-          document.getElementById("id").value = "";
-          document.getElementById("content").value = "";
-          setTimeout(() => {
-            document.getElementById("response").innerHTML = "";
-          }, 10000);
-        });
-      });
-    </script>
   </head>
   <body>
     <style>
@@ -361,7 +344,7 @@
 
     <div id="login" class="">
       <h1 id="or" class="know message">Or</h1>
-      <h1 id="msg" class="know message"><s>Message me directly</s></h1>
+      <h1 id="msg" class="know message">Message me directly</s></h1>
       <div class="btn-container">
         <input
           id="id"
@@ -369,7 +352,6 @@
           name="id"
           placeholder="Email, telegram_id or phone number"
           dir="ltr"
-          disabled
         />
       </div>
       <div class="btn-container">
@@ -379,11 +361,10 @@
           name="password"
           placeholder="..."
           dir="ltr"
-          disabled
         ></textarea>
       </div>
       <div class="btn-container">
-        <button id="send" class="btn btn-alone boxShadow aLittleBottomMargin" disabled>Send</button>
+        <button id="send" class="btn btn-alone boxShadow aLittleBottomMargin">Send</button>
       </div>
     </div>
     <div id="response"></div>
@@ -453,8 +434,9 @@
 
     <div id="cursor" class="Cursor" dir="ltr"></div>
     <script src="js/cursor.js"></script>
-    <script src="js/language.js"></script>
     <script src="js/slide.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/bot.js"></script>
   </body>
 </html>

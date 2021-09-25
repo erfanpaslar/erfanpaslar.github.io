@@ -1,3 +1,6 @@
+let zone = new Date().getTimezoneOffset();
+var lang = zone == -270 || zone == -210 ? "fa" : "en";
+
 function DateDiffer(
   thisYear,
   thisMonth,
@@ -126,16 +129,20 @@ function openGetInTouch() {
 // });
 
 const links = [
-  "http://letscode.erfanpaslar.ir",
   "https://github.com/erfanpaslar/Crack-it",
   "https://github.com/LiorSinai/SudokuSolver-Python",
+  "https://github.com/erfanpaslar/HOC-Front-end",
+  "https://github.com/erfanpaslar/The-Adventure-1979",
+  "#magic8ball",
+  "https://github.com/erfanpaslar/Mini-Blackjack",
+  "#letsCode",
   "https://github.com/RaemondBW/Python-Minesweeper",
   "https://github.com/erfanpaslar/Editor-Preview",
-  "https://github.com/erfanpaslar/The-Adventure-1979",
-  "#6",
-  "http://erfanpaslar.ir/blackjack/",
-  "#8",
+  "#Weather",
   "https://github.com/erfanpaslar/SimonSays",
+  "https://github.com/erfanpaslar/Incognito-Web",
+  "https://github.com/erfanpaslar/Complex-Calculator",
+  "https://github.com/erfanpaslar/Drag-N-Drop-ToDo"
 ];
 
 let c = document.querySelectorAll(".slideContent");

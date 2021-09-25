@@ -199,14 +199,6 @@ Carousel.propTypes = {
 const slides = [
   {
     id: 0,
-    title: "Let's Code",
-    subtitle: "CMS for everyone",
-    description: "in php",
-    image:
-      "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845038/personal_website/letsCode_hzxmxx.png",
-  },
-  {
-    id: 1,
     title: "Crack it",
     subtitle: "guess the code",
     description: "in Python & Js",
@@ -214,7 +206,7 @@ const slides = [
       "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845036/personal_website/crackIt_dbk1tv.png",
   },
   {
-    id: 2,
+    id: 1,
     title: "Sudoku Solver",
     subtitle: "GUI",
     description: "in python & Js",
@@ -222,23 +214,15 @@ const slides = [
       "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845038/personal_website/sudokuSolver_kdfjsp.png",
   },
   {
+    id: 2,
+    title: "11th HOC",
+    subtitle: "Hour Of Code Shiraz University",
+    description: "in html css js",
+    image:
+      "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1632580824/personal_website/HOC-Front-end_mainPage.png_at_master_erfanpaslar_HOC-Front-end_jvfy4x.png",
+  },
+  {
     id: 3,
-    title: "Minesweeper",
-    subtitle: "GUI",
-    description: "in python & Js",
-    image:
-      "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845036/personal_website/minesweeper_qsmfg2.png",
-  },
-  {
-    id: 4,
-    title: "Editor Preview generator",
-    subtitle: "",
-    description: "in Javascript",
-    image:
-      "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845035/personal_website/editor_ihs8of.png",
-  },
-  {
-    id: 5,
     title: "The Adventure",
     subtitle: "A 1979 Atari game",
     description: "in python",
@@ -246,7 +230,7 @@ const slides = [
       "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845662/personal_website/advCover_jkddxp.png",
   },
   {
-    id: 6,
+    id: 4,
     title: "Magic Ball",
     subtitle: "predict future",
     description: "web",
@@ -254,7 +238,7 @@ const slides = [
       "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845038/personal_website/magicBall_jmfwub.png",
   },
   {
-    id: 7,
+    id: 5,
     title: "Blackjack",
     subtitle: "Play online.",
     description: "in Javascript",
@@ -262,7 +246,31 @@ const slides = [
       "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845035/personal_website/blackjack_vdmysc.png",
   },
   {
+    id: 6,
+    title: "Let's Code",
+    subtitle: "CMS for everyone",
+    description: "in php",
+    image:
+      "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845038/personal_website/letsCode_hzxmxx.png",
+  },
+  {
+    id: 7,
+    title: "Minesweeper",
+    subtitle: "GUI",
+    description: "in python & Js",
+    image:
+      "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845036/personal_website/minesweeper_qsmfg2.png",
+  },
+  {
     id: 8,
+    title: "Editor Preview generator",
+    subtitle: "",
+    description: "in Javascript",
+    image:
+      "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845035/personal_website/editor_ihs8of.png",
+  },
+  {
+    id: 9,
     title: "How's the weather",
     subtitle: "",
     description: "in Javascript",
@@ -270,13 +278,38 @@ const slides = [
       "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845037/personal_website/weather_nybhtf.png",
   },
   {
-    id: 9,
+    id: 10,
     title: "Simon says game",
     subtitle: "",
     description: "in Javascript",
     image:
       "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845037/personal_website/simon_txyw6d.png",
   },
+  {
+    id: 11,
+    title: "Incognito suggestions on ShirazU",
+    subtitle: "",
+    description: "in php",
+    image:
+      "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1632582075/personal_website/preview2_q2n6ja.jpg",
+  },
+  {
+    id: 12,
+    title: "Realtime complex calculator",
+    subtitle: "",
+    description: "in Javascript",
+    image:
+      "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1632582916/personal_website/calculator_preview_agmtvm.jpg",
+  },
+  {
+    id: 13,
+    title: "Drag and drop to do list",
+    subtitle: "",
+    description: "in Javascript",
+    image:
+      "https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1632584034/personal_website/To_Do_mjcke6.jpg",
+  },
+  
 ];
 const app = /*#__PURE__*/ React.createElement(Carousel, {
   slides: slides,
