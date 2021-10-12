@@ -215,7 +215,7 @@ const slides = [
   },
   {
     id: 2,
-    title: "11th HOC",
+    title: "6th HOC",
     subtitle: "Hour Of Code Shiraz University",
     description: "in html css js",
     image:
