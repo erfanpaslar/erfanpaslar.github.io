@@ -2,7 +2,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+html,
+body {
+  cursor: none;
+  user-select: none;
+  /* font-size: 62.5%; */
+}
 svg {
   display: none;
 }

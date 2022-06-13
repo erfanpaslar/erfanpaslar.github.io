@@ -9,19 +9,18 @@
 
     <link rel="stylesheet" href="css/editor.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/cursor.css" />
+    <!-- <link rel="stylesheet" href="css/cursor.css" /> -->
     <link rel="stylesheet" href="css/slide.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.0/umd/react.development.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.0/umd/react-dom.development.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.7.2/prop-types.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.7.2/prop-types.js"></script> -->
     <link
       href="https://cdn.jsdelivr.net/gh/rastikerdar/samim-font@v4.0.5/dist/font-face.css"
       rel="stylesheet"
       type="text/css"
     />
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   </head>
   <body>
@@ -95,7 +94,7 @@
     </h1>
 
     <div class="boxContainer">
-      <article class="box boxLeft boxShadow firstBoxLeft">
+      <article class="box boxLeft boxShadow firstBoxLeft" data-aos="fade-right">
         <div class="thisSkillLeft thisSkill">Python</div>
         <img
           class="imageInBox imgLeft"
@@ -163,7 +162,7 @@
       </article>
 
       <div class="rightMargin"></div>
-      <article class="box boxRight boxShadow firstBoxRight">
+      <article class="box boxRight boxShadow firstBoxRight" data-aos="fade-left">
         <div class="thisSkillRight thisSkill">HTML, CSS, JS</div>
         <img
           class="imageInBox imgRight"
@@ -178,7 +177,7 @@
         </p>
       </article>
 
-      <article class="box boxShadow boxLeft">
+      <article class="box boxShadow boxLeft" data-aos="fade-right">
         <div class="thisSkillLeft thisSkill">PHP</div>
         <img
           class="imageInBox imgRight"
@@ -195,7 +194,7 @@
         </p>
       </article>
 
-      <article class="box boxShadow boxRight">
+      <article class="box boxShadow boxRight" data-aos="fade-left">
         <div class="thisSkillRight thisSkill">C, C++, C#</div>
         <img
           class="imageInBox imgLeft"
@@ -210,7 +209,7 @@
         </p>
       </article>
 
-      <article class="box boxShadow boxLeft">
+      <article class="box boxShadow boxLeft" data-aos="fade-right">
         <div class="thisSkillLeft thisSkill">Java</div>
 
         <img
@@ -227,7 +226,7 @@
         </p>
       </article>
 
-      <article class="box boxShadow boxRight">
+      <article class="box boxShadow boxRight" data-aos="fade-left">
         <div class="thisSkillRight thisSkill">Others</div>
         <img
           class="imageInBox imgRight"
@@ -248,7 +247,187 @@
       <span class="halfMark">&nbsp;My works&nbsp;</span>
     </h1>
 
-    <div id="app"></div>
+    <div class="slider-wrapper" dir="ltr">
+
+    
+      <div class="slider">
+        <div class="slide active">
+          <div class="slide-container">
+            <img src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845036/personal_website/crackIt_dbk1tv.png" alt="">
+            <h2 class="slide-Title">Crack it</h2>
+            <div class="slide-description">
+              <ul>
+                <li>In both Python and Javascript</li>
+                <li>Can you crack the code?</li>
+                <li>You have to guess the code based on previous guesses. Its something like Mastermind but with numbers.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-container">
+            <img src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845038/personal_website/sudokuSolver_kdfjsp.png" alt="">
+            <h2 class="slide-Title">Sudoku Solver</h2>
+            <div class="slide-description">
+              <ul>
+                <li>In Python and Javascript</li>
+                <li>I Collaborated and made a GUI for an existing sudoku solver project, I made the GUI with HTML, CSS, JS and connected to Python using Eel library.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-container">
+            <img src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1632580824/personal_website/HOC-Front-end_mainPage.png_at_master_erfanpaslar_HOC-Front-end_jvfy4x.png" alt="">
+            <h2 class="slide-Title"> 6th HOC Shiraz</h2>
+            <div class="slide-description">
+              <ul>
+                <li>In HTML, CSS and JS</li>
+                <li>Hour Of Code is a global movement that introduces codes to children.</li>
+                <li>I Collaborated in this project and implemented the front-end part.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-container">
+            <img src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845662/personal_website/advCover_jkddxp.png" alt="">
+            <h2 class="slide-Title">The Adventure</h2>
+            <div class="slide-description">
+              <ul>
+                <li>In Python</li>
+                <li>Adventure is a 1979 Atari game and I made the first level with Pygame, it also has those dragon AIs. I might implement other levels too. </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-container">
+            <h2 class="slide-Title">Magic 8 Ball</h2>
+            <img src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845038/personal_website/magicBall_jmfwub.png" alt="">
+            <div class="slide-description">
+              <ul>
+                <li>In HTML, CSS, JS</li>
+                <br>
+                <li>Predict future :)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-container">
+            <img src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845035/personal_website/blackjack_vdmysc.png" alt="">
+            <h2 class="slide-Title">Blackjack</h2>
+            <div class="slide-description">
+              <ul>
+                <li>In HTML, CSS, JS</li>
+                <br>
+                <li>Play Blackjack with the AI. Can you beat it?</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-container">
+            <img src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845038/personal_website/letsCode_hzxmxx.png" alt="">
+            <h2 class="slide-Title">Let's Code</h2>
+            <div class="slide-description">
+              <ul>
+                <li>In pure PHP</li>
+                <br>
+                <li>A CMS written in pure PHP, <strong>It's currently down!</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-container">
+            <img src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845036/personal_website/minesweeper_qsmfg2.png" alt="">
+            <h2 class="slide-Title">Minesweeper</h2>
+            <div class="slide-description">
+              <ul>
+                <li>In Python and Javascript</li>
+                <li>I made a GUI with a python library called Eel for and existing Minesweeper project.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-container">
+            <img src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845035/personal_website/editor_ihs8of.png" alt="">
+            <h2 class="slide-Title">Editor Preview generator</h2>
+            <div class="slide-description">
+              <ul>
+                <li>In HTML, CSS and JS</li>
+                <li>This will generate something like what you see in the beginning of this website, the colors are customizable too.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-container">
+            <img src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845037/personal_website/weather_nybhtf.png" alt="">
+            <h2 class="slide-Title">How's the weather"</h2>
+            <div class="slide-description">
+              <ul>
+                <li>In Javascript.</li>
+                <br>
+                <li>It shows the weather using an api.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-container">
+            <img src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1616845037/personal_website/simon_txyw6d.png" alt="">
+            <h2 class="slide-Title">Simon says game</h2>
+            <div class="slide-description">
+              <ul>
+                <li>In Javascript</li>
+                <br>
+                <li>One of my very first projects using HTML, CSS, JS.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-container">
+            <img src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1632582075/personal_website/preview2_q2n6ja.jpg" alt="">
+            <h2 class="slide-Title">Incognito suggestions</h2>
+            <div class="slide-description">
+              <ul>
+                <li>In PHP and HTML, CSS, JS</li>
+                <li>A platform that anyone could say their comments about Shiraz University. It also connects to a <a href="https://github.com/ar-ekt/IncognitoBot">telegram bot</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-container">
+            <img src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1632582916/personal_website/calculator_preview_agmtvm.jpg" alt="">
+            <h2 class="slide-Title">Realtime complex calculator</h2>
+            <div class="slide-description">
+              <ul>
+                <li>In Javascript</li>
+                <li>My EM project that calculates basic complex numbers equations and shows the solution in realtime.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-container">
+            <img src="https://res.cloudinary.com/erfanpaslar-ir/image/upload/v1632584034/personal_website/To_Do_mjcke6.jpg" alt="">
+            <h2 class="slide-Title">Drag and drop to do list</h2>
+            <div class="slide-description">
+              <ul>
+                <li>In HTML, CSS, Javascript</li>
+                <li>A basic local ToDo List. I'm planning to improve it using NodeJS privately :)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <h1 id="inTouch" class="know">
       <span class="halfMark">&nbsp;Get in touch&nbsp;</span>
@@ -433,10 +612,15 @@
     <div class="empty"></div>
 
     <div id="cursor" class="Cursor" dir="ltr"></div>
-    <script src="js/cursor.js"></script>
+
+    <!-- <script src="js/cursor.js"></script> -->
     <script src="js/slide.js"></script>
     <script src="js/app.js"></script>
     <script src="js/language.js"></script>
     <script src="js/bot.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
