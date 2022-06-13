@@ -1,8 +1,12 @@
 var Slider = function() {
   var total, $slide, $slider, sliderWidth, increment = 120;
+  if (window.innerWidth < 768) {
+    increment = window.innerWidth / 10;
+  }
+
   var on = function() {
     $slider = $('.slider');
-    $slide = $('.slide');
+    $slide = $('.slide'); 
     sliderWidth = $slider.width();
     total = $slide.length;
     position();
@@ -49,12 +53,12 @@ var Slider = function() {
     }
   }
   
-  var imageSize = function() {
-    return $slider.width() / 3;
-  }
-  
-  var recalculateSizes = function() {
+  var recalculateSizes = function () {
     sliderWidth = $slider.width();
+    if (window.innerWidth < 768) {
+      increment = window.innerWidth / 10;
+    }
+
     position();
   }
   
@@ -66,7 +70,11 @@ var Slider = function() {
   
   var addEvents = function() {
     $( window ).resize(recalculateSizes);
-    $(document).on('click','.slide', clickedImage);
+    $(document).on('click', '.slide', clickedImage);
+    $('.active').removeClass('active');
+    const slides = $(".slide")
+    slides[parseInt(slides.length/2)].classList.add('active');
+    position();
   }
   
   return {
